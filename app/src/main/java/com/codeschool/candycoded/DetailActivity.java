@@ -21,18 +21,23 @@ public class DetailActivity extends AppCompatActivity {
 
         if (intent != null && intent.hasExtra("candy_name"))
             candyName = intent.getStringExtra("candy_name");
+        TextView tvName = findViewById(R.id.tv_name);
+        tvName.setText(candyName);
 
         if (intent != null && intent.hasExtra("candy_price"))
-            candyPrice = intent.getStringExtra("candy_name");
+            candyPrice = intent.getStringExtra("candy_price");
+        TextView tvPrice = findViewById(R.id.tv_price);
+        tvPrice.setText(candyPrice);
 
-        if (intent != null && intent.hasExtra("candy_image"))
-            candyImage = intent.getStringExtra("candy_image");
+//        if (intent != null && intent.hasExtra("candy_image"))
+//            candyImage = intent.getStringExtra("candy_image");
+//        ImageView ivImage = findViewById(R.id.iv_candy);
+//        ivImage.sourc;
 
-        if (intent != null && intent.hasExtra("candy_price"))
-            candyPrice = intent.getStringExtra("candy_name");
-
-        TextView textView = findViewById(R.id.tv_candy_detail);
-        textView.setText(candyName);
+        if (intent != null && intent.hasExtra("candy_description"))
+            candyDesc = intent.getStringExtra("candy_description");
+        TextView tvDescription = findViewById(R.id.tv_desc);
+        tvDescription.setText(candyDesc);
 
         Log.d("DetailActivity", "Intent data: " + candyImage
                 + ", " + candyPrice + ", " + candyDesc);
