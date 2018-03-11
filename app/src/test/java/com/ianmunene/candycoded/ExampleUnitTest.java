@@ -1,4 +1,4 @@
-package com.codeschool.candycoded;
+package com.ianmunene.candycoded;
 
 import org.junit.Test;
 

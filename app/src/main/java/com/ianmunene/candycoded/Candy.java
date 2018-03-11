@@ -1,4 +1,4 @@
-package com.codeschool.candycoded;
+package com.ianmunene.candycoded;
 
 public class Candy {
     public int id;

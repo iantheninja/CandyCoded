@@ -1,9 +1,9 @@
-package com.codeschool.candycoded;
+package com.ianmunene.candycoded;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -29,17 +29,14 @@ public class DetailActivity extends AppCompatActivity {
         TextView tvPrice = findViewById(R.id.tv_price);
         tvPrice.setText(candyPrice);
 
-//        if (intent != null && intent.hasExtra("candy_image"))
-//            candyImage = intent.getStringExtra("candy_image");
-//        ImageView ivImage = findViewById(R.id.iv_candy);
-//        ivImage.sourc;
+        if (intent != null && intent.hasExtra("candy_image"))
+            candyImage = intent.getStringExtra("candy_image");
+        ImageView ivImage = findViewById(R.id.iv_candy);
+        //Picasso.with(this).load(candyImage).into(ivImage);
 
         if (intent != null && intent.hasExtra("candy_description"))
             candyDesc = intent.getStringExtra("candy_description");
         TextView tvDescription = findViewById(R.id.tv_desc);
         tvDescription.setText(candyDesc);
-
-        Log.d("DetailActivity", "Intent data: " + candyImage
-                + ", " + candyPrice + ", " + candyDesc);
     }
 }
