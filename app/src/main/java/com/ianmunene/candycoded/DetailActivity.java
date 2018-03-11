@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class DetailActivity extends AppCompatActivity {
 
     @Override
@@ -32,7 +34,7 @@ public class DetailActivity extends AppCompatActivity {
         if (intent != null && intent.hasExtra("candy_image"))
             candyImage = intent.getStringExtra("candy_image");
         ImageView ivImage = findViewById(R.id.iv_candy);
-        //Picasso.with(this).load(candyImage).into(ivImage);
+        Picasso.get().load(candyImage).into(ivImage);
 
         if (intent != null && intent.hasExtra("candy_description"))
             candyDesc = intent.getStringExtra("candy_description");
